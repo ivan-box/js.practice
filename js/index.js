@@ -587,8 +587,15 @@
 // console.log(mango.email); // "mango@mail.com"
 // console.log(mango.accessLevel); // "superuser"
 function validatePIN(pin) {
+  console.log(!pin.split("").includes(" "));
   return (
-    (pin.map((el) => el % 1 === 0) && pin.length === 4) || pin.length === 6
+    !pin.split("").includes(" ") &&
+    pin
+      .split("")
+      .map((el) => !isNaN(el))
+      .every((el) => el) &&
+    pin % 1 === 0 &&
+    (pin.length === 4 || pin.length === 6)
   );
 }
-console.log(validatePIN("12345a"));
+console.log(validatePIN("123 "));
