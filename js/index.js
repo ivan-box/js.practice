@@ -455,3 +455,140 @@
 // console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
 // storage.removeItem("Prolonger");
 // console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Droid"]
+
+// class Car {
+//   #model;
+//   #price;
+//   #brand;
+
+//   constructor({ brand, model, price }) {
+//     this.#brand = brand;
+//     this.#model = model;
+//     this.#price = price;
+//   }
+
+//   get brand() {
+//     return this.#brand;
+//   }
+//   set brand(brand) {
+//     return (this.#brand = brand);
+//   }
+
+//   changeBrand(newBrand) {
+//     this.#brand = newBrand;
+//   }
+
+//   get model() {
+//     return this.#model;
+//   }
+//   set model(model) {
+//     return (this.#model = model);
+//   }
+
+//   updateModel(newModel) {
+//     this.#model = newModel;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+//   set price(price) {
+//     return (this.#price = price);
+//   }
+//   // Change code above this line
+// }
+
+// class Car {
+//   static MAX_PRICE = 50000;
+//   #price;
+
+//   constructor({ price }) {
+//     this.#price = price;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//   set price(newPrice) {
+//     if (newPrice <= Car.MAX_PRICE) {
+//       this.#price = newPrice;
+//       }
+
+//   }
+//   // Change code above this line
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
+
+// audi.price = 49000;
+// console.log(audi.price); // 49000
+
+// audi.price = 51000;
+// console.log(audi.price); // 49000
+
+// class Car {
+//   static #MAX_PRICE = 50000;
+//   static checkPrice(price) {
+//     if (price > Car.#MAX_PRICE) {
+//       return "Error! Price exceeds the maximum";
+//     }
+//     return "Success! Price is within acceptable limits";
+//   }
+//   constructor({ price }) {
+//     this.price = price;
+//   }
+// }
+
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
+
+// console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+// console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     // return this.email;
+//   }
+
+//   set email(newEmail) {
+//     // this.email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+//   // Change code below this line
+//   constructor({email, accessLevel}) {
+//     super(email)
+//     this.email = email;
+//     this.accessLevel = accessLevel;
+//   }
+
+//   static AccessLevel = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+
+//   // Change code above this line
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   accessLevel: Admin.AccessLevel.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.accessLevel); // "superuser"
+function validatePIN(pin) {
+  return (
+    (pin.map((el) => el % 1 === 0) && pin.length === 4) || pin.length === 6
+  );
+}
+console.log(validatePIN("12345a"));
