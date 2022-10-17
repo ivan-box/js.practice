@@ -363,7 +363,95 @@
 
 // console.log(filter_list([1, 2, "a", "b"]));
 
-const friend = (friends) => friends.filter((el) => el.length === 4);
-console.log(
-  friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"])
-);
+// const friend = (friends) => friends.filter((el) => el.length === 4);
+// console.log(
+//   friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"])
+// );
+
+// const parent = {
+//   name: "Stacey",
+//   surname: "Moore",
+//   age: 54,
+//   heritage: "Irish",
+// };
+
+// const child = Object.create(parent);
+
+// console.log((child.name = "Jason"));
+// console.log((child.age = 27));
+
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+//   getItems() {
+//     return this.items;
+//   }
+//   addItem(newItem) {
+//     this.items.push(newItem);
+//   }
+//   removeItem(itemToRemove) {
+//     this.items = this.items.filter((el) => el !== itemToRemove);
+//   }
+// }
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems());
+// storage.addItem("Droid");
+// console.log(storage.getItems());
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems());
+
+// class StringBuilder {
+//   constructor(initialValue) {
+//     this.value = initialValue;
+//   }
+//   getValue() {
+//     return this.value;
+//   }
+//   padEnd(str) {
+//     this.value += str;
+//   }
+//   padStart(str) {
+//     this.value = str + this.value;
+//   }
+//   padBoth(str) {
+//     this.value = str + this.value + str;
+//   }
+// }
+
+// const builder = new StringBuilder(".");
+// console.log(builder.getValue()); // "."
+// builder.padStart("^");
+// console.log(builder.getValue()); // "^."
+// builder.padEnd("^");
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
+
+// class Storage {
+//   #items; // Change code below this line
+
+//   constructor(items) {
+//     this.#items = items;
+//   }
+
+//   getItems() {
+//     return this.#items;
+//   }
+
+//   addItem(newItem) {
+//     this.#items.push(newItem);
+//   }
+
+//   removeItem(itemToRemove) {
+//     this.#items = this.#items.filter((item) => item !== itemToRemove);
+//   }
+// }
+
+// // Change code above this line
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Droid"]
