@@ -586,16 +586,72 @@
 
 // console.log(mango.email); // "mango@mail.com"
 // console.log(mango.accessLevel); // "superuser"
-function validatePIN(pin) {
-  console.log(!pin.split("").includes(" "));
-  return (
-    !pin.split("").includes(" ") &&
-    pin
-      .split("")
-      .map((el) => !isNaN(el))
-      .every((el) => el) &&
-    pin % 1 === 0 &&
-    (pin.length === 4 || pin.length === 6)
-  );
+
+// function validatePIN(pin) {
+//   console.log(!pin.split("").includes(" "));
+//   return (
+//     !pin.split("").includes(" ") &&
+//     pin
+//       .split("")
+//       .map((el) => !isNaN(el))
+//       .every((el) => el) &&
+//     pin % 1 === 0 &&
+//     (pin.length === 4 || pin.length === 6)
+//   );
+// }
+// console.log(validatePIN("123 "));
+
+// function reverseWords(str) {
+//   return (str = str
+//     .split(" ")
+//     .map((el) => el.split("").reverse().join(""))).join(" ");
+// }
+
+// console.log(reverseWords("The quick brown fox jumps over the lazy dog."));
+
+// function squareDigits(num) {
+//   return (num = +num
+//     .toString()
+//     .split("")
+//     .map((el) => Math.pow(el, 2))
+//     .join(""));
+// }
+
+// console.log(squareDigits(2112));
+
+// console.log(window.innerWidth);
+
+// function areYouPlayingBanjo(name) {
+//   return name[0].toLowerCase() === "r"
+//     ? `${name} plays banjo`
+//     : `${name} does not play banjo`;
+// }
+
+// console.log(areYouPlayingBanjo("Adam"));
+// console.log(areYouPlayingBanjo("rolf"));
+
+function getGrade(s1, s2, s3) {
+  let score = Math.floor((s1 + s2 + s3) / 3);
+  console.log(score, typeof score);
+  let result;
+  switch (score) {
+    case 90 <= score <= 100:
+      result = "A";
+      console.log(score);
+      break;
+    case 80 <= score < 90:
+      result = "B";
+      break;
+    case 70 <= score < 80:
+      result = "C";
+      break;
+    case 60 <= score < 70:
+      result = "D";
+      break;
+    default:
+      result = "F";
+  }
 }
-console.log(validatePIN("123 "));
+
+console.log(getGrade(95, 90, 93));
+console.log(getGrade(82, 85, 87));
