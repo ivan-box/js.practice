@@ -651,7 +651,16 @@ function getGrade(s1, s2, s3) {
     default:
       result = "F";
   }
+  return result;
 }
 
 console.log(getGrade(95, 90, 93));
 console.log(getGrade(82, 85, 87));
+
+// const abbrevName = (name) => {
+//   name = name.toUpperCase();
+//   return name[0] + "." + name[name.indexOf(" ") + 1];
+// };
+
+// console.log(abbrevName("Sam Harris"));
+// console.log(abbrevName("Patrick Feenan"));
