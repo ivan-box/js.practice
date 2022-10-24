@@ -630,32 +630,32 @@
 // console.log(areYouPlayingBanjo("Adam"));
 // console.log(areYouPlayingBanjo("rolf"));
 
-function getGrade(s1, s2, s3) {
-  let score = Math.floor((s1 + s2 + s3) / 3);
-  console.log(score, typeof score);
-  let result;
-  switch (score) {
-    case 90 <= score <= 100:
-      result = "A";
-      console.log(score);
-      break;
-    case 80 <= score < 90:
-      result = "B";
-      break;
-    case 70 <= score < 80:
-      result = "C";
-      break;
-    case 60 <= score < 70:
-      result = "D";
-      break;
-    default:
-      result = "F";
-  }
-  return result;
-}
+// function getGrade(s1, s2, s3) {
+//   let score = Math.floor((s1 + s2 + s3) / 3);
+//   console.log(score, typeof score);
+//   let result;
+//   switch (score) {
+//     case 90 <= score <= 100:
+//       result = "A";
+//       console.log(score);
+//       break;
+//     case 80 <= score < 90:
+//       result = "B";
+//       break;
+//     case 70 <= score < 80:
+//       result = "C";
+//       break;
+//     case 60 <= score < 70:
+//       result = "D";
+//       break;
+//     default:
+//       result = "F";
+//   }
+//   return result;
+// }
 
-console.log(getGrade(95, 90, 93));
-console.log(getGrade(82, 85, 87));
+// console.log(getGrade(95, 90, 93));
+// console.log(getGrade(82, 85, 87));
 
 // const abbrevName = (name) => {
 //   name = name.toUpperCase();
@@ -664,3 +664,34 @@ console.log(getGrade(82, 85, 87));
 
 // console.log(abbrevName("Sam Harris"));
 // console.log(abbrevName("Patrick Feenan"));
+
+// function sumArray(array) {
+//   return array
+//     ? array
+//         .sort((a, b) => a - b)
+//         .slice(1, array.length - 1)
+//         .reduce((total, el) => total + el)
+//     : 0;
+// }
+
+// console.log(sumArray([0, 1, 6, 10, 10]));
+// // console.log(sumArray(null));
+// console.log(sumArray([]));
+
+// function repeatStr(n, s) {
+//   for (let i = 0; i <= n; i++) {
+//     s.concat(s);
+//     // s += s;
+//   }
+//   return s;
+// }
+
+// console.log(repeatStr(3, "*"));
+
+// function feast(beast, dish) {
+//   return (
+//     beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
+//   );
+// }
+
+// console.log(feast("great blue heron", "garlic naan"));
