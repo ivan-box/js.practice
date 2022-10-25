@@ -587,20 +587,6 @@
 // console.log(mango.email); // "mango@mail.com"
 // console.log(mango.accessLevel); // "superuser"
 
-// function validatePIN(pin) {
-//   console.log(!pin.split("").includes(" "));
-//   return (
-//     !pin.split("").includes(" ") &&
-//     pin
-//       .split("")
-//       .map((el) => !isNaN(el))
-//       .every((el) => el) &&
-//     pin % 1 === 0 &&
-//     (pin.length === 4 || pin.length === 6)
-//   );
-// }
-// console.log(validatePIN("123 "));
-
 // function reverseWords(str) {
 //   return (str = str
 //     .split(" ")
@@ -632,26 +618,18 @@
 
 // function getGrade(s1, s2, s3) {
 //   let score = Math.floor((s1 + s2 + s3) / 3);
-//   console.log(score, typeof score);
-//   let result;
-//   switch (score) {
-//     case 90 <= score <= 100:
-//       result = "A";
-//       console.log(score);
-//       break;
-//     case 80 <= score < 90:
-//       result = "B";
-//       break;
-//     case 70 <= score < 80:
-//       result = "C";
-//       break;
-//     case 60 <= score < 70:
-//       result = "D";
-//       break;
-//     default:
-//       result = "F";
+
+//   if (score <= 100 && 90 <= score) {
+//     return "A";
+//   } else if (score < 90 && 80 <= score) {
+//     return "B";
+//   } else if (score < 80 && 70 <= score) {
+//     return "C";
+//   } else if (score < 70 && 60 <= score) {
+//     return "D";
+//   } else if (score < 60 && 0 <= score) {
+//     return "F";
 //   }
-//   return result;
 // }
 
 // console.log(getGrade(95, 90, 93));
@@ -670,7 +648,7 @@
 //     ? array
 //         .sort((a, b) => a - b)
 //         .slice(1, array.length - 1)
-//         .reduce((total, el) => total + el)
+//         .reduce((total, el) => total + el, 0)
 //     : 0;
 // }
 
@@ -679,11 +657,13 @@
 // console.log(sumArray([]));
 
 // function repeatStr(n, s) {
-//   for (let i = 0; i <= n; i++) {
-//     s.concat(s);
-//     // s += s;
-//   }
-//   return s;
+//   //   let total = "";
+//   //   for (let i = 0; i < n; i++) {
+//   //     // s.concat(s);
+//   //     total += s;
+//   //   }
+//   //   return total;
+//   return s.repeat(n);
 // }
 
 // console.log(repeatStr(3, "*"));
@@ -695,3 +675,54 @@
 // }
 
 // console.log(feast("great blue heron", "garlic naan"));
+
+// перший елемент — це кількість додатних чисел, а другий — сума від’ємних чисел
+
+// let testData = [1, 2, 3, , 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15];
+
+// function countPositivesSumNegatives(input) {
+//   let res = [];
+//   let sum = 0;
+//   let total = [];
+//   console.log(total);
+//   if (input !== []) {
+//     input.forEach((el) => (el > 0 ? res.push(el) : (sum += el)));
+//     total.push(res.length);
+//     total.push(sum);
+//     return total;
+//   } else return total;
+// }
+
+// console.log(countPositivesSumNegatives([]));
+// console.log(
+//   countPositivesSumNegatives([
+//     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15,
+//   ])
+// );
+
+// function validatePIN(pin) {
+//   console.log(!pin.split("").includes(" "));
+//   pin = !pin.split("").includes(" ")
+//     ? pin
+//         .split("")
+//         .map((el) => !isNaN(el))
+//         .every((el) => el) &&
+//       pin % 1 === 0 &&
+//       (pin.length === 4 || pin.length === 6)
+//     : false;
+//   return pin;
+// }
+// console.log(validatePIN("123 "));
+
+// function solution(str, ending) {
+//   return str.slice(str.length - ending.length) === ending;
+// }
+// str.endsWith(searchString[, length])
+// console.log(solution("abcde", "cde"));
+// console.log(solution("abcde", "abc"));
+
+function findOdd(a) {
+  console.log(a.map((el) => a.includes(el)));
+}
+
+console.log(findOdd([1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1]));
