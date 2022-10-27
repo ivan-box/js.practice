@@ -685,34 +685,38 @@
 //   let sum = 0;
 //   let total = [];
 //   console.log(total);
-//   if (input !== []) {
+//   if (input == [] || input == 0 || input === null) {
+//     return total;
+//   } else {
 //     input.forEach((el) => (el > 0 ? res.push(el) : (sum += el)));
 //     total.push(res.length);
 //     total.push(sum);
 //     return total;
-//   } else return total;
+//   }
 // }
 
 // console.log(countPositivesSumNegatives([]));
 // console.log(
 //   countPositivesSumNegatives([
-//     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15,
+//     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15,
 //   ])
 // );
 
-// function validatePIN(pin) {
-//   console.log(!pin.split("").includes(" "));
-//   pin = !pin.split("").includes(" ")
-//     ? pin
-//         .split("")
-//         .map((el) => !isNaN(el))
-//         .every((el) => el) &&
-//       pin % 1 === 0 &&
-//       (pin.length === 4 || pin.length === 6)
-//     : false;
-//   return pin;
-// }
-// console.log(validatePIN("123 "));
+function validatePIN(pin) {
+  console.log(pin, typeof pin, pin.indexOf(" ") !== -1);
+  // console.log(!pin.split("").includes(" "));
+  // pin = !pin.split("").includes(" ")
+  return pin.indexOf(" ") === -1
+    ? pin
+        .split("")
+        .map((el) => !isNaN(el))
+        .every((el) => el) &&
+        pin % 1 === 0 &&
+        (pin.length === 4 || pin.length === 6)
+    : pin.indexOf(" ") !== -1;
+  // return;
+}
+console.log(validatePIN("123 "));
 
 // function solution(str, ending) {
 //   return str.slice(str.length - ending.length) === ending;
@@ -721,8 +725,31 @@
 // console.log(solution("abcde", "cde"));
 // console.log(solution("abcde", "abc"));
 
-function findOdd(a) {
-  console.log(a.map((el) => a.includes(el)));
-}
+// function findOdd(a) {
+//   console.log(a.map((el) => a.includes(el)));
+// }
 
-console.log(findOdd([1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1]));
+// console.log(findOdd([1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1]));
+
+// function betterThanAverage(classPoints, yourPoints) {
+//   classPoints.push(yourPoints);
+//   return (
+//     yourPoints >
+//     classPoints.reduce((total, el) => total + el) / classPoints.length
+//   );
+// }
+// console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75));
+
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//   return distanceToPump / mpg <= fuelLeft;
+// };
+
+// console.log(zeroFuel(50, 25, 2));
+// console.log(zeroFuel(100, 50, 1));
+
+// function disemvowel(str) {
+//   const remove = ["i"];
+//   return str.split("").filter((el) => el !== remove);
+// }
+
+// console.log(disemvowel("This website is for losers LOL!"));
