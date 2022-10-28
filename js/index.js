@@ -702,22 +702,6 @@
 //   ])
 // );
 
-function validatePIN(pin) {
-  console.log(pin, typeof pin, pin.indexOf(" ") !== -1);
-  // console.log(!pin.split("").includes(" "));
-  // pin = !pin.split("").includes(" ")
-  return pin.indexOf(" ") === -1
-    ? pin
-        .split("")
-        .map((el) => !isNaN(el))
-        .every((el) => el) &&
-        pin % 1 === 0 &&
-        (pin.length === 4 || pin.length === 6)
-    : pin.indexOf(" ") !== -1;
-  // return;
-}
-console.log(validatePIN("123 "));
-
 // function solution(str, ending) {
 //   return str.slice(str.length - ending.length) === ending;
 // }
@@ -753,3 +737,19 @@ console.log(validatePIN("123 "));
 // }
 
 // console.log(disemvowel("This website is for losers LOL!"));
+
+// function validatePIN(pin) {
+//   console.log(pin, typeof pin, pin.indexOf(" ") !== -1);
+//   // console.log(!pin.split("").includes(" "));
+//   // pin = !pin.split("").includes(" ")
+//   return pin.indexOf(" ") === -1
+//     ? pin
+//         .split("")
+//         .map((el) => !isNaN(el))
+//         .every((el) => el) &&
+//         pin % 1 === 0 &&
+//         (pin.length === 4 || pin.length === 6)
+//     : pin.indexOf(" ") !== -1;
+//   // return;
+// }
+// console.log(validatePIN("123 "));
