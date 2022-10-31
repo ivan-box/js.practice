@@ -753,3 +753,13 @@
 //   // return;
 // }
 // console.log(validatePIN("123 "));
+
+// function digitalRoot(n) {
+//   return ((n - 1) % 9) + 1;
+
+//   let newN = n + "";
+//   newN = newN.split("").reduce((sum, el) => (sum += +el), 0);
+//   return newN > 9 ? digitalRoot(newN) : newN;
+
+// }
+// console.log(digitalRoot(452));
