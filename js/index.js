@@ -763,3 +763,23 @@
 
 // }
 // console.log(digitalRoot(452));
+
+function vowelOne(s) {
+  const newString = [];
+  const testArr = ["a", "e", "i", "o", "u", "y"];
+  console.log(
+    s
+      .toLowerCase()
+      .split("")
+      .map((i) => i)
+  );
+  s.toLowerCase()
+    .split("")
+    .map((i) => {
+      if (testArr.includes(i.toLowerCase())) {
+        return newString.push("1");
+      }
+      return newString.push("0");
+    });
+  return newString.join("");
+}
